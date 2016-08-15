@@ -1,0 +1,3 @@
+include README.rst
+include django_rlog/management/*.py
+include django_rlog/management/commands/*.py
