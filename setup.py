@@ -13,14 +13,14 @@ setup(
     description='Save rlog\'s Pub/Sub Log to Disk',
     long_description=open('README.rst').read(),
 
-    url='https://github.com/Brightcells/django-rlog',
+    url='https://github.com/django-xxx/django-rlog',
 
     author='Hackathon',
     author_email='kimi.huang@brightcells.com',
 
     packages=['django_rlog'],
     py_modules=[],
-    install_requires=[],
+    install_requires=['django-six'],
     include_package_data=True,
 
     classifiers=[

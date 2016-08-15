@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
-from django.core.management.base import BaseCommand
+from django_six import CompatibilityBaseCommand
 
 
 r = settings.REDIS_CACHE
@@ -10,14 +10,13 @@ r = settings.REDIS_CACHE
 DEFAULT_CHANNEL = 'django-logit'
 
 
-class Command(BaseCommand):
+class Command(CompatibilityBaseCommand):
     help = 'Stop rlog.'
 
     def add_arguments(self, parser):
         parser.add_argument(
             '--channel',
-            action='pubsub_channel',
-            dest='pubsub_channel',
+            dest='channel',
             default=DEFAULT_CHANNEL,
             help='Pubsub channel RedisHandler usage.',
         )
