@@ -36,7 +36,7 @@ class Command(CompatibilityBaseCommand):
         key = options.get('key', DEFAULT_KEY)
         timeout = options.get('timeout', DEFAULT_TIMEOUT)
         while True:
-            key, data = r.blpop(key, timeout)
+            data = r.blpop(key, timeout)
             if data:
                 print(data)
-                logger.debug(data)
+                logger.debug(data[-1])
