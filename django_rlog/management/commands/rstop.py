@@ -1,13 +1,11 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
+from django_rlog.defaults import DEFAULT_CHANNEL
 from django_six import CompatibilityBaseCommand
 
 
 r = settings.REDIS_CACHE
-
-
-DEFAULT_CHANNEL = 'django-logit'
 
 
 class Command(CompatibilityBaseCommand):
