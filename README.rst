@@ -15,12 +15,17 @@ Installation
 Usage
 =====
 
-Start::
+Start rlog::
 
-    python manage.py rlog [channel] [filename]
+    python manage.py rlog [channel] [filename] [handler] [when] [maxBytes] [backupCount]
 
 
-Stop::
+Start rlistlog::
+
+    python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes] [backupCount]
+
+
+Stop rlog::
 
     python manage.py rstop [channel]
 

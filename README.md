@@ -7,11 +7,15 @@ pip install django-rlog
 ```
 
 ## Usage
-* Start
+* Start rlog
 ```shell
-python manage.py rlog [channel] [filename]
+python manage.py rlog [channel] [filename] [handler] [when] [maxBytes] [backupCount]
 ```
-* Stop
+* Start rlistlog
+```shell
+python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes] [backupCount]
+```
+* Stop rlog
 ```shell
 python manage.py rstop [channel]
 ```
