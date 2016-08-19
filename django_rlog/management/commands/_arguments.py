@@ -38,3 +38,10 @@ def _add_arguments(parser):
         type=int,
         help='BackupCount of TimedRotatingFileHandler/RotatingFileHandler.',
     )
+    parser.add_argument(
+        '--debug',
+        action='store_true',
+        dest='debug',
+        default=False,
+        help='Print info or not.',
+    )

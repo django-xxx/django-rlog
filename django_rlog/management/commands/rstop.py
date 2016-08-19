@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from django.conf import settings
+
 from django_rlog.defaults import DEFAULT_CHANNEL
 from django_six import CompatibilityBaseCommand
 

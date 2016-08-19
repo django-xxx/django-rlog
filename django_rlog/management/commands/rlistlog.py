@@ -3,6 +3,7 @@
 from __future__ import print_function
 
 from django.conf import settings
+
 from django_rlog.defaults import DEFAULT_KEY, DEFAULT_TIMEOUT
 from django_rlog.logger import get_logger
 from django_rlog.management.commands._arguments import _add_arguments
@@ -32,11 +33,13 @@ class Command(CompatibilityBaseCommand):
         _add_arguments(parser)
 
     def handle(self, *args, **options):
+        debug = options.get('debug', False)
         logger = get_logger(**options)
         key = options.get('key', DEFAULT_KEY)
         timeout = options.get('timeout', DEFAULT_TIMEOUT)
         while True:
             data = r.blpop(key, timeout)
             if data:
-                print(data)
+                if debug:
+                    print(data)
                 logger.debug(data[-1])

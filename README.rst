@@ -17,12 +17,12 @@ Usage
 
 Start rlog::
 
-    python manage.py rlog [channel] [filename] [handler] [when] [maxBytes] [backupCount]
+    python manage.py rlog [channel] [filename] [handler] [when] [maxBytes] [backupCount] [debug]
 
 
 Start rlistlog::
 
-    python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes] [backupCount]
+    python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes] [backupCount] [debug]
 
 
 Stop rlog::
