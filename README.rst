@@ -34,3 +34,17 @@ Stop rlistlog::
 
     python manage.py rliststop [key]
 
+
+Redis Connection
+================
+
+::
+
+    def get_connection():
+        for key in ['REDIS_CONN', 'REDIS_CLIENT', 'REDIS_CACHE']:
+            if hasattr(settings, key):
+                return getattr(settings, key)
+
+
+* Get ``Redis Connection`` from settings
+* ``Redis Connection`` in settings refer to [Django Cook Book](https://github.com/xxx-cook-book/django-cook-book/tree/master/Caches/Redis)
