@@ -29,3 +29,8 @@ Stop rlog::
 
     python manage.py rstop [channel]
 
+
+Stop rlistlog::
+
+    python manage.py rliststop [key]
+

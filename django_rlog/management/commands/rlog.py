@@ -3,7 +3,6 @@
 from __future__ import print_function
 
 from django.conf import settings
-
 from django_rlog.defaults import DEFAULT_CHANNEL
 from django_rlog.logger import get_logger
 from django_rlog.management.commands._arguments import _add_arguments

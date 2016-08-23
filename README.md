@@ -19,3 +19,7 @@ python manage.py rlistlog [key] [timeout] [filename] [handler] [when] [maxBytes]
 ```shell
 python manage.py rstop [channel]
 ```
+* Stop rlistlog
+```shell
+python manage.py rliststop [key]
+```
