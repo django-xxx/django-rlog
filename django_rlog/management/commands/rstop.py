@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from django.conf import settings
+from django_rlog.connect import get_connection
 from django_rlog.defaults import DEFAULT_CHANNEL
 from django_six import CompatibilityBaseCommand
-
-
-r = settings.REDIS_CACHE
 
 
 class Command(CompatibilityBaseCommand):
@@ -20,4 +17,5 @@ class Command(CompatibilityBaseCommand):
         )
 
     def handle(self, *args, **options):
+        r = get_connection()
         r.publish(options.get('channel', DEFAULT_CHANNEL), 'KILL')
