@@ -1,4 +1,4 @@
-# django-six
+# django-rlog
 Save rlog's Pub/Sub Log to Disk
 
 ## Installation
