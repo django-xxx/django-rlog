@@ -20,7 +20,7 @@ setup(
 
     packages=['django_rlog'],
     py_modules=[],
-    install_requires=['django-six'],
+    install_requires=['django-six', 'rlog'],
     include_package_data=True,
 
     classifiers=[
